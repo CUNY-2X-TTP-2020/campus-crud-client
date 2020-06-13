@@ -1,0 +1,7 @@
+// ACTION TYPES
+const FETCH_ALL_STUDENTS = "FETCH_ALL_STUDENTS";
+
+export default
+{
+    FETCH_ALL_STUDENTS,
+}
