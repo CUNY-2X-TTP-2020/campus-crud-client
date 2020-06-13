@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
 
+import RoutesContainer from "../Routes/RoutesContainer";
+
 function App() 
 {
     return (
         <div className="App">
             <header className="App-header">
-                
+                <RoutesContainer />
             </header>
         </div>
     );

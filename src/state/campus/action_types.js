@@ -1,0 +1,7 @@
+// ACTION TYPES
+const FETCH_ALL_CAMPUSES = "FETCH_ALL_CAMPUSES";
+
+export default
+{
+    FETCH_ALL_CAMPUSES,
+}
