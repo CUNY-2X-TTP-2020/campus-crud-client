@@ -16,3 +16,11 @@ export function fetchStudent(student)
         payload: student
     };
 }
+
+export function addStudent(student)
+{
+    return {
+        type: types.ADD_STUDENT,
+        payload: student
+    };
+}

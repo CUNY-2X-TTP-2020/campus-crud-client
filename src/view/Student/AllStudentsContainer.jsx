@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import AllStudentsView from "./AllStudentsView";
-import { fetchAllStudentsThunk } from "../../state/student/thunks";
+import { fetchAllStudentsThunk, addStudentThunk } from "../../state/student/thunks";
 
 // Smart container
 class AllStudentsContainer extends Component
@@ -13,12 +13,60 @@ class AllStudentsContainer extends Component
         this.props.fetchAllStudents();
     }
 
+    handleSubmit = (event) =>
+    {
+        // Prevent browser refresh
+        event.preventDefault();
+
+        const firstName = event.target.firstName.value;
+        const lastName = event.target.lastName.value;
+        const email = event.target.email.value;
+        const gpa = event.target.gpa.value;
+        const imageUrl = event.target.imageUrl.value;
+
+        let newStudent =
+        {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            gpa: gpa,
+            imageUrl: imageUrl
+        };
+        this.props.addStudent(newStudent);
+
+        event.target.reset();
+    }
+
     render()
     {
         return (
-            <AllStudentsView 
-                allStudents={this.props.allStudents}
-            />
+            <div>
+                <fieldset>
+                    <legend>Add New Student</legend>
+                    <form onSubmit={this.handleSubmit}>
+                        <label htmlFor="firstName">First Name: </label>
+                        <input type="text" name="firstName" placeholder="First Name" required />
+                        <br/>
+                        <label htmlFor="lastName">Last Name: </label>
+                        <input type="text" name="lastName" placeholder="Last Name" required />
+                        <br/>
+                        <label htmlFor="email">Email: </label>
+                        <input type="text" name="email" placeholder="Email" required />
+                        <br/>
+                        <label htmlFor="gpa">GPA: </label>
+                        <input type="number" name="gpa" step="0.01" min="0.00" max="4.00" placeholder="4.00" />
+                        <br/>
+                        <label htmlFor="imageUrl">Image Url: </label>
+                        <input type="text" name="imageUrl" placeholder="https://via.placeholder.com/150" />
+                        <br/>
+                        <button type="submit">Submit</button>
+                    </form>
+                </fieldset>
+
+                <AllStudentsView 
+                    allStudents={this.props.allStudents}
+                />
+            </div>
         );
     }
 }
@@ -41,7 +89,8 @@ const mapState = (state) =>
 const mapDispatch = (dispatch) =>
 {
     return {
-        fetchAllStudents: () => dispatch(fetchAllStudentsThunk())
+        fetchAllStudents: () => dispatch(fetchAllStudentsThunk()),
+        addStudent: (student) => dispatch(addStudentThunk(student))
     };
 }
 

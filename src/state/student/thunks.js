@@ -1,6 +1,11 @@
 import axios from "axios";
 
-import { fetchAllStudents, fetchStudent } from "./actions";
+import 
+{ 
+    fetchAllStudents, 
+    fetchStudent,
+    addStudent
+} from "./actions";
 
 // THUNK CREATORS
 export const fetchAllStudentsThunk = () => (dispatch) =>
@@ -17,4 +22,12 @@ export const fetchStudentThunk = (id) => (dispatch) =>
     .then((res) => res.data)
     .then((student) => dispatch(fetchStudent(student)))
     .catch((err) => console.error(err)); 
+};
+
+export const addStudentThunk = (student) => (dispatch) =>
+{
+    return axios.post("/api/students/", student)
+    .then((res) => res.data)
+    .then((student) => dispatch(addStudent(student)))
+    .catch((err) => console.error(err));
 };

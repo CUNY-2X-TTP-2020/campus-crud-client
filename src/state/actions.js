@@ -10,5 +10,6 @@ export
 export 
 { 
     fetchAllStudents,
-    fetchStudent
+    fetchStudent,
+    addStudent
 } from "./student/actions";
