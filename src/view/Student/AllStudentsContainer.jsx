@@ -21,6 +21,7 @@ class AllStudentsContainer extends Component
         const firstName = event.target.firstName.value;
         const lastName = event.target.lastName.value;
         const email = event.target.email.value;
+        const gpa = event.target.gpa.value;
         const imageUrl = event.target.imageUrl.value;
 
         let newStudent =
@@ -28,6 +29,7 @@ class AllStudentsContainer extends Component
             firstName: firstName,
             lastName: lastName,
             email: email,
+            gpa: gpa,
             imageUrl: imageUrl
         };
         this.props.addStudent(newStudent);
