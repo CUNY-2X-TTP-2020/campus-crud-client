@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import { AllCampusesContainer, CampusContainer } from "../Campus";
-import { AllStudentsContainer } from "../Student";
+import { AllStudentsContainer, StudentContainer } from "../Student";
 
 const RoutesView = () =>
 {
@@ -12,6 +12,7 @@ const RoutesView = () =>
             <Route exact path="/campuses" component={AllCampusesContainer} />
             <Route exact path="/campuses/:id" component={CampusContainer} />
             <Route exact path="/students" component={AllStudentsContainer} />
+            <Route exact path="/students/:id" component={StudentContainer} />
         </Switch>
     );
 };
