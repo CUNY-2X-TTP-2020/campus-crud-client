@@ -16,3 +16,11 @@ export function fetchCampus(campus)
         payload: campus
     };
 }
+
+export function addCampus(campus)
+{
+    return {
+        type: types.ADD_CAMPUS,
+        payload: campus
+    };
+}
