@@ -3,14 +3,13 @@
 ## All Campuses and Students
 
 ### React-Redux, React, and React Router
-- [ ] Write a campus sub-reducer to manage campuses in your Redux store
-- [ ] Write a student sub-reducer to manage students in your Redux store
-
-- [ ] Write a component to display a list of all campuses (just their names and images)
-- [ ] Write a component to display a list of all students (just their names)
-- [ ] Display the all-campuses component when the url matches `/campuses`
-- [ ] Display the all-students component when the url matches `/students`
-- [ ] Add links to the navbar that can be used to navigate to the all-campuses view and the all-students view
+- [X] Write a campus sub-reducer to manage campuses in your Redux store
+- [X] Write a student sub-reducer to manage students in your Redux store
+- [X] Write a component to display a list of all campuses (just their names and images)
+- [X] Write a component to display a list of all students (just their names)
+- [X] Display the all-campuses component when the url matches `/campuses`
+- [X] Display the all-students component when the url matches `/students`
+- [X] Add links to the navbar that can be used to navigate to the all-campuses view and the all-students view
 
 ---
 
