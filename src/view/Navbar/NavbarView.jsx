@@ -5,9 +5,9 @@ const NavbarView = (props) =>
 {
     return (
         <nav>
-            <Link to="/">Home</Link>
-            <Link to="/campuses">Campuses</Link>
-            <Link to="/students">Students</Link>
+            <Link to="/"><button>Home</button></Link>
+            <Link to="/campuses"><button>Campuses</button></Link>
+            <Link to="/students"><button>Students</button></Link>
         </nav>
     );
 };
