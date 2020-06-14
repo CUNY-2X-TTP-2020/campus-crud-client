@@ -8,3 +8,11 @@ export function fetchAllStudents(students)
         payload: students
     };
 }
+
+export function fetchStudent(student)
+{
+    return {
+        type: types.FETCH_STUDENT,
+        payload: student
+    };
+}

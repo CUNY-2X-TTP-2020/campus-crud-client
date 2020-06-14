@@ -6,4 +6,8 @@ export
     fetchCampusThunk
 } from "./campus/thunks";
 
-export { fetchAllStudentsThunk } from "./student/thunks";
+export 
+{ 
+    fetchAllStudentsThunk,
+    fetchStudentThunk
+} from "./student/thunks";

@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import CampusView from "./CampusView";
-import { fetchCampusThunk } from "../../state/thunks";
+import StudentView from "./StudentView";
+import { fetchStudentThunk } from "../../state/thunks";
 
 // Smart container
-class CampusContainer extends Component
+class StudentContainer extends Component
 {
     componentDidMount()
     {
-        this.props.fetchCampus(this.props.match.params.id);
+        this.props.fetchStudent(this.props.match.params.id);
     }
 
     render()
     {
         return (
-            <CampusView 
-                campus={this.props.campus}
+            <StudentView 
+                student={this.props.student}
             />
         );
     }
@@ -26,7 +26,7 @@ class CampusContainer extends Component
 const mapState = (state) =>
 {
     return {
-        campus: state.campus
+        student: state.student
     };
 }
 
@@ -34,9 +34,9 @@ const mapState = (state) =>
 const mapDispatch = (dispatch) =>
 {
     return {
-        fetchCampus: (id) => dispatch(fetchCampusThunk(id))
+        fetchStudent: (id) => dispatch(fetchStudentThunk(id))
     };
 }
 
 // Export our store-connected container by default
-export default connect(mapState, mapDispatch)(CampusContainer);
+export default connect(mapState, mapDispatch)(StudentContainer);

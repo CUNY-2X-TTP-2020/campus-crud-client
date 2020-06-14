@@ -7,6 +7,8 @@ const reducer = (state = [], action) =>
     {
         case types.FETCH_ALL_STUDENTS:
             return action.payload;
+        case types.FETCH_STUDENT:
+            return action.payload;
         default:
             return state;
     }

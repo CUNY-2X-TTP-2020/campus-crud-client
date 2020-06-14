@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AllStudentsView = (props) =>
 {
@@ -7,7 +8,9 @@ const AllStudentsView = (props) =>
             {props.allStudents.map((student) =>
             (
                 <div key={student.id}>
-                    <h1>{student.firstName} {student.lastName}</h1>
+                    <Link to={`/students/${student.id}`}>
+                        <h1>{student.firstName} {student.lastName}</h1>
+                    </Link>
                 </div>
             ))}
         </div>
