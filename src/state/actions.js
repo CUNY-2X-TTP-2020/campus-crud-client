@@ -3,7 +3,8 @@
 export 
 { 
     fetchAllCampuses,
-    fetchCampus
+    fetchCampus,
+    addCampus
 } from "./campus/actions";
 
 export 
