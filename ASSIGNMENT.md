@@ -16,7 +16,7 @@
 ## Single Student and Single Campus
 
 ### React and React Router
-- [X] Write a component to display to single campus with the following information:
+- [X] Write a component to display a single campus with the following information:
     - [X] The campus name, image, address and description
     - [X] A list of the names of all students in that campus (or a helpful message if it doesn't have any students)
 - [X] Display the appropriate campus info when the url matches `/campuses/:campusId`
