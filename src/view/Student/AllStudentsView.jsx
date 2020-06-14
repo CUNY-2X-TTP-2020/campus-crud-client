@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const AllStudentsView = (props) =>
 {
+    if(!props.allStudents.length) return <div>There are no students</div>;
+
     return (
         <div>
             {props.allStudents.map((student) =>
