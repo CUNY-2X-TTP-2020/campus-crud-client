@@ -8,3 +8,11 @@ export function fetchAllCampuses(campuses)
         payload: campuses
     };
 }
+
+export function fetchCampus(campus)
+{
+    return {
+        type: types.FETCH_CAMPUS,
+        payload: campus
+    };
+}
