@@ -3,7 +3,8 @@
 export 
 { 
     fetchAllCampusesThunk,
-    fetchCampusThunk
+    fetchCampusThunk,
+    addCampusThunk
 } from "./campus/thunks";
 
 export 
