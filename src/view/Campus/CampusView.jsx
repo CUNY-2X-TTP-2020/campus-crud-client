@@ -13,8 +13,8 @@ const CampusView = (props) =>
                 <p>{props.campus.students.length} Students</p>
                 {props.campus.students.map((student) =>
                 (
-                    <Link to={`/students/${student.id}`}>
-                        <div key={student.id}>{student.firstName}</div>
+                    <Link to={`/students/${student.id}`} key={student.id}>
+                        {student.firstName}
                     </Link>
                 ))}
             </div>
