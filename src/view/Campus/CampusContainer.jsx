@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import CampusView from "./CampusView";
-import { fetchCampusThunk } from "../../state/campus/thunks";
+import { fetchCampusThunk } from "../../state/thunks";
 
 // Smart container
 class CampusContainer extends Component
