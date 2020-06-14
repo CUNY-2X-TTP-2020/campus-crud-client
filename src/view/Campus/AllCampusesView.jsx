@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const AllCampusesView = (props) =>
 {
+    if(!props.allCampuses.length) return <div>There are no campuses</div>;
+
     return (
         <div>
             {props.allCampuses.map((campus) =>
@@ -13,6 +15,7 @@ const AllCampusesView = (props) =>
                     </Link>
 
                     <img src={campus.imageUrl} width="150px" alt={campus.name} />
+                    <p>{campus.students.length} students</p>
                 </div>
             ))}
         </div>
