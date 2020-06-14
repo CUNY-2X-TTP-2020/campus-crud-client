@@ -40,19 +40,19 @@
 ## Adding a Campus and Adding a Student
 
 ### React and React Router
-- [ ] Write a component to display a form for adding a new campus that contains inputs for at least the name and address
-- [ ] Display this component EITHER as part of the all-campuses view, or as its own view
-- [ ] Submitting the form with a valid name/address should:
-    - [ ] Make an AJAX request that causes the new campus to be persisted in the database
-    - [ ] Add the new campus to the list of campuses without needing to refresh the page
+- [X] Write a component to display a form for adding a new campus that contains inputs for at least the name and address
+- [X] Display this component EITHER as part of the all-campuses view, or as its own view
+- [X] Submitting the form with a valid name/address should:
+    - [X] Make an AJAX request that causes the new campus to be persisted in the database
+    - [X] Add the new campus to the list of campuses without needing to refresh the page
 
 ---
 
-- [ ] Write a component to display a form for adding a new student that contains inputs for at least the first name, last name and email
-- [ ] Display this component EITHER as part of the all-students view, or as its own view
-- [ ] Submitting the form with a valid first name/last name/email should:
-    - [ ] Make an AJAX request that causes the new student to be persisted in the database
-    - [ ] Add the new student to the list of students without needing to refresh the page
+- [X] Write a component to display a form for adding a new student that contains inputs for at least the first name, last name and email
+- [X] Display this component EITHER as part of the all-students view, or as its own view
+- [X] Submitting the form with a valid first name/last name/email should:
+    - [X] Make an AJAX request that causes the new student to be persisted in the database
+    - [X] Add the new student to the list of students without needing to refresh the page
 
 ---
 
