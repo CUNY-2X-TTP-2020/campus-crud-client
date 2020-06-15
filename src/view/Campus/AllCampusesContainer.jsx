@@ -44,7 +44,6 @@ class AllCampusesContainer extends Component
     {
         if(!window.confirm(`Are you sure you want to delete campus ${campusId}?`)) return;
         
-        console.log("Delete the campus");
         this.props.deleteCampus(campusId);
     }
 
