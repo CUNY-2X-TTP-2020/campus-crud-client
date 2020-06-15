@@ -24,3 +24,11 @@ export function addCampus(campus)
         payload: campus
     };
 }
+
+export function deleteCampus(campusId)
+{
+    return {
+        type: types.DELETE_CAMPUS,
+        payload: campusId
+    };
+}

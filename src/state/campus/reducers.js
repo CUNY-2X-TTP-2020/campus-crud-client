@@ -11,6 +11,8 @@ const reducer = (state = [], action) =>
             return action.payload;
         case types.ADD_CAMPUS:
             return [...state, action.payload];
+        case types.DELETE_CAMPUS:
+            return state.filter((campus) => campus.id !== action.payload);
         default:
             return state;
     }

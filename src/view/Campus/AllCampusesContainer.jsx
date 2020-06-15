@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import AllCampusesView from "./AllCampusesView";
-import { fetchAllCampusesThunk, addCampusThunk } from "../../state/campus/thunks";
+import 
+{ 
+    fetchAllCampusesThunk, 
+    addCampusThunk,
+    deleteCampusThunk
+} from "../../state/campus/thunks";
 
 // Smart container
 class AllCampusesContainer extends Component
@@ -35,6 +40,14 @@ class AllCampusesContainer extends Component
         event.target.reset();
     }
 
+    handleDelete = (campusId) =>
+    {
+        if(!window.confirm(`Are you sure you want to delete campus ${campusId}?`)) return;
+        
+        console.log("Delete the campus");
+        this.props.deleteCampus(campusId);
+    }
+
     render()
     {
         return(
@@ -60,6 +73,7 @@ class AllCampusesContainer extends Component
     
                 <AllCampusesView 
                     allCampuses={this.props.allCampuses}
+                    handleDelete={this.handleDelete}
                 />
             </div>
         );
@@ -85,7 +99,8 @@ const mapDispatch = (dispatch) =>
 {
     return {
         fetchAllCampuses: () => dispatch(fetchAllCampusesThunk()),
-        addCampus: (campus) => dispatch(addCampusThunk(campus))
+        addCampus: (campus) => dispatch(addCampusThunk(campus)),
+        deleteCampus: (campusId) => dispatch(deleteCampusThunk(campusId))
     };
 }
 

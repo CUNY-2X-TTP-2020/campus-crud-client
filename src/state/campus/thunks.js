@@ -4,7 +4,8 @@ import
 { 
     fetchAllCampuses,
     fetchCampus,
-    addCampus
+    addCampus,
+    deleteCampus
 } from "./actions";
 
 // THUNK CREATORS
@@ -29,5 +30,13 @@ export const addCampusThunk = (campus) => (dispatch) =>
     return axios.post("/api/campuses/", campus)
     .then((res) => res.data)
     .then((campus) => dispatch(addCampus(campus)))
+    .catch((err) => console.error(err));
+};
+
+export const deleteCampusThunk = (campusId) => (dispatch) =>
+{
+    return axios.delete(`/api/campuses/${campusId}`)
+    .then((res) => res.data)
+    .then(() => dispatch(deleteCampus(campusId)))
     .catch((err) => console.error(err));
 };
