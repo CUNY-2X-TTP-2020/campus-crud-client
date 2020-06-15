@@ -27,8 +27,9 @@ const CampusView = (props) =>
             <img src={props.campus.imageUrl} alt={props.campus.name} />
             <h1>{props.campus.name}</h1>
             <h3>{props.campus.address}</h3>
-
             <p>{props.campus.description}</p>
+            <button onClick={() => props.handleDelete(props.campus.id)}>Delete</button>;
+
             {studentDisplay}
         </div>
     );
