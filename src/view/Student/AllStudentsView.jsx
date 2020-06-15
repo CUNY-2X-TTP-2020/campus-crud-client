@@ -13,6 +13,8 @@ const AllStudentsView = (props) =>
                     <Link to={`/students/${student.id}`}>
                         <h1>{student.firstName} {student.lastName}</h1>
                     </Link>
+
+                    <button onClick={() => props.handleDelete(student.id)}>Delete</button>
                 </div>
             ))}
         </div>

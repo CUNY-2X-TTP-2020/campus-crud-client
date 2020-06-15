@@ -12,5 +12,6 @@ export
 { 
     fetchAllStudentsThunk,
     fetchStudentThunk,
-    addStudentThunk
+    addStudentThunk,
+    deleteStudentThunk
 } from "./student/thunks";

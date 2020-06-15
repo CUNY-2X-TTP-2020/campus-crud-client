@@ -24,3 +24,11 @@ export function addStudent(student)
         payload: student
     };
 }
+
+export function deleteStudent(studentId)
+{
+    return {
+        type: types.DELETE_STUDENT,
+        payload: studentId
+    };
+}
