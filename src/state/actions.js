@@ -4,7 +4,8 @@ export
 { 
     fetchAllCampuses,
     fetchCampus,
-    addCampus
+    addCampus,
+    deleteCampus
 } from "./campus/actions";
 
 export 

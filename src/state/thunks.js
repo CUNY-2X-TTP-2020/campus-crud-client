@@ -4,7 +4,8 @@ export
 { 
     fetchAllCampusesThunk,
     fetchCampusThunk,
-    addCampusThunk
+    addCampusThunk,
+    deleteCampusThunk
 } from "./campus/thunks";
 
 export 
